@@ -102,12 +102,98 @@ Indica los comandos necesarios para instalar las dependencias, configurar la bas
 de datos, ejecutar el backend, ejecutar la interfaz y correr las pruebas. La
 solución debe poder levantarse siguiendo únicamente estas instrucciones.
 
+----------------------------------------------
+
+El proyecto fue desarrollado utilizando Python 3.14.6 y Node.js v24.20.0. 
+Para el set up del proyecto se utilizaron los comandos:
+
+*Backend*
+```bash
+pip install django djangorestframework django-cors-headers
+django-admin startproject core .
+```
+
+*Frontend*
+```Bash
+npx create-next-app@latest frontend
+```
+
+Con esto queda inicializada la estructura de archivos base para el backend DRF y frontend Next.js.
+
+## Configuración del backend django
+
+- Ir al directorio del backend, crear y activar un entorno virtual:
+```bash
+1. cd backend
+2. python -m venv venv
+3. .\venv\Scripts\activate (en windows) | source venv/vin/activate (en Mac/Linux)
+```
+
+- Instalar dependencias:
+```bash
+pip install -r requirements.txt
+```
+
+- Ejecutar migraciones para inicializar base de datos SQLite:
+```bash
+python manage.py migrate
+```
+
+- Poblar base de datos con datos de prueba:
+```bash
+python manage.py loaddata productos_seed
+```
+
+- Inicio del servidor del backend:
+```bash
+python manage.py runserver
+```
+
+## Pruebas automatizadas
+
+- Dentro del directorio backend, ejecutar tests con:
+```bash
+python manage.py test
+```
+
+Los tests se encuentran en el archivo *backend/catalog/tests.py*
+
+## Configuración del Frontend next.js
+
+- Ir al directorio del frontend e instalar los paquetes de Node.js:
+```bash
+1. cd frontend
+2. npm install
+```
+
+- Iniciar el servidor de desarrollo del frontend
+```bash
+npm run dev
+```
+
+En este caso la interfaz está en `http://localhost:3000`
+
 ### Decisiones y observaciones
 
 Describe brevemente cualquier decisión técnica relevante, supuesto, limitación o
 mejora pendiente.
 
+---------------------------
+
+La interfaz de la plataforma es bien simple solamente entrega lo solicitado, se podría mejorar
+agregando un sistema de paginación pero como esta prueba no tiene muchos datos en la base se 
+consideró que no era necesario.
+
+Para priorizar el desarrollo de las funcionalidades se decidió utilizar Tailwind CSS 
+en lugar de crear y configurar archivos de estilos aparte.
+
 ### Herramientas de IA utilizadas
 
 Si utilizaste herramientas de IA, indica cuáles y para qué. Si no utilizaste
 ninguna, indícalo también.
+
+-----------------------------------------------------------
+
+Se consultó al asistente Gemini de google para resolver dudas respecto a la estructura y el desarrollo
+de la solución, en particular se dejó a Gemini el diseño de estilos de la interfaz para poder dar
+prioridad al resto del desarrollo.

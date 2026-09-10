@@ -1,0 +1,83 @@
+[
+{
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+        "name": "Cirugia Oral"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+        "name": "Equipamiento Dental"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+        "name": "Ortodoncia"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+        "name": "Bisturi",
+        "description": "Instrumento quirúrgico odontológico diseñado para procedimientos de cirugía periodontal y manejo de tejidos blandos",
+        "price": "25000",
+        "stock": 27,
+        "category": 1,
+        "created_at": "2026-09-08T20:35:46.827Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+        "name": "Cuchareta De Alveolo",
+        "description": "Instrumento quirúrgico fabricado en acero inoxidable de grado médico, diseñado para el legrado, limpieza y eliminación de tejido patológico en alvéolos dentales y zonas quirúrgicas",
+        "price": "1800",
+        "stock": 14,
+        "category": 1,
+        "created_at": "2026-09-08T20:37:09.318Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+        "name": "Turbina",
+        "description": "Pieza de mano de alta velocidad diseñada para procedimientos odontológicos restauradores y de operatoria general",
+        "price": "200000",
+        "stock": 10,
+        "category": 2,
+        "created_at": "2026-09-08T20:39:03.155Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+        "name": "Top Comfort",
+        "description": "Cera ortodóntica utilizada para cubrir brackets y alambres y proteger la mucosa oral durante tratamientos de ortodoncia",
+        "price": "17000",
+        "stock": 29,
+        "category": 3,
+        "created_at": "2026-09-08T20:40:54.444Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+        "name": "Resina Ortodoncia",
+        "description": "Resina adhesiva utilizada para la cementación de brackets estéticos en tratamientos de ortodoncia.",
+        "price": "44000",
+        "stock": 12,
+        "category": 3,
+        "created_at": "2026-09-09T19:50:11.649Z"
+    }
+}
+]
