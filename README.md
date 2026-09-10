@@ -104,22 +104,6 @@ solución debe poder levantarse siguiendo únicamente estas instrucciones.
 
 ----------------------------------------------
 
-El proyecto fue desarrollado utilizando Python 3.14.6 y Node.js v24.20.0. 
-Para el set up del proyecto se utilizaron los comandos:
-
-*Backend*
-```bash
-pip install django djangorestframework django-cors-headers
-django-admin startproject core .
-```
-
-*Frontend*
-```Bash
-npx create-next-app@latest frontend
-```
-
-Con esto queda inicializada la estructura de archivos base para el backend DRF y frontend Next.js.
-
 ## Configuración del backend django
 
 - Ir al directorio del backend, crear y activar un entorno virtual:
@@ -179,6 +163,22 @@ Describe brevemente cualquier decisión técnica relevante, supuesto, limitació
 mejora pendiente.
 
 ---------------------------
+
+El proyecto fue desarrollado utilizando Python 3.14.6 y Node.js v24.20.0. 
+Para el set up del proyecto se utilizaron los comandos:
+
+*Backend*
+```bash
+pip install django djangorestframework django-cors-headers
+django-admin startproject core .
+```
+
+*Frontend*
+```Bash
+npx create-next-app@latest frontend
+```
+
+Con esto quedó inicializada la estructura de archivos base para el backend DRF y frontend Next.js.
 
 La interfaz de la plataforma es bien simple solamente entrega lo solicitado, se podría mejorar
 agregando un sistema de paginación pero como esta prueba no tiene muchos datos en la base se 
